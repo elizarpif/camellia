@@ -26,7 +26,7 @@ func Test_cameliaCipher_Encrypt(t *testing.T) {
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			cipher, err := NewCameliaCipher(tt.params.key)
+			cipher, err := NewCipher(tt.params.key)
 			if err != nil {
 				t.Fatalf("err: %v", err)
 			}
@@ -127,7 +127,7 @@ func TestVectors(t *testing.T) {
 			ciphertext := fromHex(v.ciphertext)
 			buf := make([]byte, BLOCKSIZE)
 
-			c, err := NewCameliaCipher(key)
+			c, err := NewCipher(key)
 			if err != nil {
 				t.Fatalf("Test vector %d: Failed to create Camellia instance: %s", i, err)
 			}

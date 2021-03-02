@@ -265,7 +265,7 @@ func kAkB(kl, kr [2]uint64) (ka [2]uint64, kb [2]uint64) {
 // 128 бит = 16 байт
 // 256 бит = 32 байт
 // 192 бит = 24 байт
-func NewCameliaCipher(key []byte) (cipher.Block, error) {
+func NewCipher(key []byte) (cipher.Block, error) {
 	k := len(key)
 
 	switch k {
