@@ -1,6 +1,6 @@
 ## Camellia
 
-Библиотека, реализующая алгоритм [Camellia](https://ru.wikipedia.org/wiki/Camellia)
+Library realizes the Camellia algorythm | Библиотека, реализующая алгоритм [Camellia](https://ru.wikipedia.org/wiki/Camellia)
 
 ```go
 cipher, err := NewCameliaCipher(key)
